@@ -3,22 +3,18 @@ import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        String[] array1 = { "Morango", "Tomate", "Melao", "Banana" };
+        String[] array2 = { "Morango", "Melancia", "Melao", "Banana" };
 
-        List<String> frutas = new ArrayList<>();
-        frutas.add("Morango");
-        frutas.add("Tomate");
-        frutas.add("Melao");
+        for (int i = 0; i < array1.length; i++) {
+            for (int j = 0; j < array2.length; j++) {
+                if (array1[i] == array2[j]) {
+                    System.out.println(array2[j]);
+                }
 
-        List<String> frutas2 = new ArrayList<>();
-        frutas2.add("Morango");
-        frutas2.add("Melancia");
-        frutas2.add("Melao");        
+            }
 
-        frutas.retainAll(frutas2);
-        for(int i = 0; i<frutas.size();i++ ){
-            System.out.println(frutas.get(i));
         }
-        
 
     }
 }
